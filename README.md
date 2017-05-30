@@ -1,4 +1,4 @@
-rdslogs2es
+rdslogs2s3
 ===
 
 Save RDS Logs file to S3.
