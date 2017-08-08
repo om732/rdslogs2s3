@@ -24,9 +24,8 @@ S3_BUCKET = os.environ['S3_BUCKET']
 S3_KEY_PREFIX = os.environ['S3_KEY_PREFIX']
 REGION = os.environ['REGION']
 
-now = datetime.now().strftime('%Y%m%d%H%M%S')
-
 def lambda_handler(event, context):
+    now = datetime.now().strftime('%Y%m%d%H%M%S')
     read_log_line_num = 2000
     rds = boto3.client('rds', region_name=REGION)
     s3 = boto3.client('s3', region_name=REGION)
